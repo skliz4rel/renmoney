@@ -1,0 +1,45 @@
+Steps to Solving the problem.
+
+
+1. Store the number of Iterations to do a comparison.
+2. Create a variable to count comparison (ncomparisonCounter) based on the iteration checks
+3. Accept first Number and second number and store in a variable A and B
+4. Create a module to compute the arithmetic and find the comparison count.
+5. In the module to compute Store the Factor for A and B into two long variables. Afactor and Bfactor.
+6. Store the divisor value into a variables called divisor.
+7. Store the multiplication of A and Afactor in a variable multofA.
+8. Find the reminder of the division of multofA and the divisor number variable
+9. Store the reminder in variable  reminderA.
+10. Store the multiplication of B and Bfactor in a variable multofB.
+11. Find the reminder of the division of multofB and the divisor number variable
+12. Store the reminder in variable  reminderB.
+13. Create an array to pass the new reminders for A and B (reminderA & reminderB)
+14. Create a Module to accept both reminderA and reminderB to convert to binary and do a Comparison for the last 8 digits.
+15. Accept reminderA and reminderB in  doComparison(long reminderA, long reminderB) module.
+16. Convert both reminders to binary strings
+17. Do comparison and ensure both strings are equal in length. if no add preceeding 0's
+18. Extract the last 8 digits of both strings and compare. If the are same increment ncomparisonCounter  variable
+19 Wrap up the compute method in a loop. Iterating over the  1000000 or provided iteration number.
+20. Passed the Number hold variable reminderA and reminderB to repeat the looping process.
+21. Exit the loop when looping condition is met.
+22. Display the result.
+23. Terminate program
+
+OPENNESS
+You can change the generators. Cos I made they global variables were they could easily be seen and altered
+   static int numberofIterations = 1000000;
+    
+     //This variables below are needed for computation
+    static int Afactor = 16807; static int Bfactor = 48271;
+            
+    static int divisor = 2147483647;
+
+
+CONVINIENCE FOR CHANGE
+All core functionalities has been treated has seperate individual modules or methods. For easy reusablility and change.
+
+
+BIG HOLE NOTATION
+O (1000000) - O (N)
+
+Memory and Speed computation is O (N) because algorithm is a straight linear loop, with no inner loops.
