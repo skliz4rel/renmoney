@@ -13,5 +13,5 @@ package renmoneysolu;
 
 public interface IGeneratorUtility {
     
-      long[]  generator(long A, long B, int Afactor, int Bfactor, int divisor );
+      long[]  generate(long A, long B, int Afactor, int Bfactor, int divisor );
 }

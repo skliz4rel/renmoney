@@ -14,7 +14,7 @@ import static renmoneysolu.RenmoneySolu.Afactor;
 public class GeneratorUtility implements IGeneratorUtility {
     
      
-       public long[] generator(long A, long B, int Afactor, int Bfactor, int divisor ){
+       public long[] generate(long A, long B, int Afactor, int Bfactor, int divisor ){
                
             //Do reminder calculation for A
             
@@ -33,6 +33,4 @@ public class GeneratorUtility implements IGeneratorUtility {
     }
     
   
-    
-    
 }
