@@ -14,7 +14,7 @@ public class Solveproblem {
      int comparisonCounter = 0;  //This is going to store the number of comparison count. basically the answer
       
     //This variables below are needed for computation
-    int Afactor = 0, Bfactor = 0, divisor=0;          
+    //int Afactor = 0, Bfactor = 0, divisor=0;          
    
    long A = 0, B=0;
    
@@ -23,13 +23,11 @@ public class Solveproblem {
    //This class has the generator modules can be extended with more functionalities
    private IGeneratorUtility generatorObj =null;
    
-    public Solveproblem(long A, long B, int Afactor, int Bfactor, int divisor,  int numberofIterations){
+    public Solveproblem(long A, long B,  int numberofIterations){
           
           this.A = A;
           this.B = B;
-          this.Afactor = Afactor;
-          this.Bfactor = Bfactor;
-          this.divisor = divisor;
+          
           this.numberofIterations =  numberofIterations;
           
           generatorObj = new GeneratorUtility();
@@ -41,7 +39,7 @@ public class Solveproblem {
             for(int k=0; k< numberofIterations; k++){
                 
                 //This is the generator object used to generate values
-               long[] values =  generatorObj.generate( A,  B, Afactor, Bfactor, divisor);  //This method is going to perform the computation
+               long[] values =  generatorObj.generate( A,  B);  //This method is going to perform the computation
                
                A = values[0]; B = values[1];
                

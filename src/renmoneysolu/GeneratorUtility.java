@@ -5,7 +5,6 @@
  */
 package renmoneysolu;
 
-import static renmoneysolu.RenmoneySolu.Afactor;
 
 /**
  *
@@ -13,8 +12,12 @@ import static renmoneysolu.RenmoneySolu.Afactor;
  */
 public class GeneratorUtility implements IGeneratorUtility {
     
+     final int Afactor = 16807; final int Bfactor = 48271;
+            
+     final int divisor = 2147483647;
+    
      
-       public long[] generate(long A, long B, int Afactor, int Bfactor, int divisor ){
+       public long[] generate(long A, long B ){ //, int Afactor, int Bfactor, int divisor
                
             //Do reminder calculation for A
             
@@ -30,7 +33,7 @@ public class GeneratorUtility implements IGeneratorUtility {
             
             
             return new long[] { reminderA, reminderB };  // We return the reminder so we can continue the loop with the next reminder in the iteration.
-    }
+       }
     
   
 }

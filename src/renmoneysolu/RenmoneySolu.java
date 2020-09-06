@@ -22,9 +22,14 @@ public class RenmoneySolu {
    static int numberofIterations = 1000000;
     
      //This variables below are needed for computation
+   /*
     static int Afactor = 16807; static int Bfactor = 48271;
             
-    static int divisor = 2147483647;            
+    static int divisor = 2147483647;        
+   
+   The generator variables have be declared in the IGeneratorUtility.java class as constant for proper memory optimization
+   To speed up the Big O Notation.
+   */
    
    static int comparisonCounter = 0;  //This is going to store the number of comparison count. basically the answer
     
@@ -40,7 +45,7 @@ public class RenmoneySolu {
             long A = scanner.nextLong();
             long B = scanner.nextLong();     //We store the values in a long to avoid a MemoryOutOfBound Exception
             
-            Solveproblem problem = new Solveproblem( A, B,  Afactor, Bfactor, divisor, numberofIterations);
+            Solveproblem problem = new Solveproblem( A, B, numberofIterations);
             
             comparisonCounter = problem.solve();            
             
