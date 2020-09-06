@@ -37,6 +37,7 @@ You can change the generators. Cos I made they global variables were they could 
 
 CONVINIENCE FOR CHANGE
 All core functionalities has been treated has seperate individual modules or methods. For easy reusablility and change.
+GeneratorUtility is used to perform the generator of the reminders. So it can be loaded with more kind of generator functionality.
 
 
 BIG HOLE NOTATION
